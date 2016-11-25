@@ -1,0 +1,6 @@
+namespace SmartHomeAPI.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
