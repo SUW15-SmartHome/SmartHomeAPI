@@ -75,3 +75,6 @@ c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\b
 c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\obj\Debug\SmartHomeAPI.csprojResolveAssemblyReference.cache
 c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\obj\Debug\SmartHomeAPI.dll
 c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\obj\Debug\SmartHomeAPI.pdb
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Cors.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Http.Cors.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Http.Cors.xml
