@@ -27,7 +27,7 @@ namespace SmartHomeAPI
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "GET,POST,DELETE");
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "GET,POST,PUT,DELETE");
             config.EnableCors(cors);
         }
     }

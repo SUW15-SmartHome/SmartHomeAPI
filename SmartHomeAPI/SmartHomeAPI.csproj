@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -217,11 +225,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LampsAPIController.cs" />
-    <Compile Include="Controllers\TempsAPIController.cs" />
+    <Compile Include="Controllers\TemperaturesAPIController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\TemperatureHub.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -243,23 +252,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Lamp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Temp.Context.cs">
+    <Compile Include="Models\Temperature.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Temp.Context.tt</DependentUpon>
+      <DependentUpon>Temperature.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Temp.cs">
-      <DependentUpon>Temp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Temp.Designer.cs">
+    <Compile Include="Models\Temperature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Temp.edmx</DependentUpon>
+      <DependentUpon>Temperature.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Temp1.cs">
+    <Compile Include="Models\Temperature.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Temp.tt</DependentUpon>
+      <DependentUpon>Temperature.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Temperatures.cs">
+      <DependentUpon>Temperature.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -287,15 +296,15 @@
       <DependentUpon>Lamp.edmx</DependentUpon>
       <LastGenOutput>Lamp1.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Temp.Context.tt">
+    <Content Include="Models\Temperature.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Temp.edmx</DependentUpon>
-      <LastGenOutput>Temp.Context.cs</LastGenOutput>
+      <DependentUpon>Temperature.edmx</DependentUpon>
+      <LastGenOutput>Temperature.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Temp.tt">
+    <Content Include="Models\Temperature.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Temp.edmx</DependentUpon>
-      <LastGenOutput>Temp1.cs</LastGenOutput>
+      <DependentUpon>Temperature.edmx</DependentUpon>
+      <LastGenOutput>Temperature.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -325,17 +334,19 @@
     <Content Include="Models\Lamp.edmx.diagram">
       <DependentUpon>Lamp.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\Temp.edmx">
+    <EntityDeploy Include="Models\Temperature.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Temp.Designer.cs</LastGenOutput>
+      <LastGenOutput>Temperature.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Temp.edmx.diagram">
-      <DependentUpon>Temp.edmx</DependentUpon>
+    <Content Include="Models\Temperature.edmx.diagram">
+      <DependentUpon>Temperature.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

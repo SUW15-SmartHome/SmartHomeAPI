@@ -13,10 +13,10 @@ namespace SmartHomeAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SmartHomeTempEntities : DbContext
+    public partial class TemperatureEntities : DbContext
     {
-        public SmartHomeTempEntities()
-            : base("name=SmartHomeTempEntities")
+        public TemperatureEntities()
+            : base("name=TemperatureEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace SmartHomeAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Temp> Temp { get; set; }
+        public virtual DbSet<Temperatures> Temperatures { get; set; }
     }
 }

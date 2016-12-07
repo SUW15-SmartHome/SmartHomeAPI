@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(SmartHomeAPI.Startup))]
+[assembly: OwinStartupAttribute(typeof(SmartHomeAPI.Startup))]
 
 namespace SmartHomeAPI
 {
@@ -12,6 +13,7 @@ namespace SmartHomeAPI
     {
         public void Configuration(IAppBuilder app)
         {
+            app.MapSignalR();
             ConfigureAuth(app);
         }
     }

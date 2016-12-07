@@ -78,3 +78,7 @@ c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\o
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Cors.dll
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Http.Cors.dll
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\System.Web.Http.Cors.xml
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
