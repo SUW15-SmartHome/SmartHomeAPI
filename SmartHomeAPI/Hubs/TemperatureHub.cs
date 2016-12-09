@@ -7,9 +7,9 @@ using System.Web;
 
 namespace SmartHomeAPI.Hubs
 {
-    public partial class TemperatureHub : Hub
+    public class TemperatureHub : Hub
     {
-        public void broadcastMessage(Temperatures temp)
+        public void BroadcastMessage(Temperatures temp)
         {
             Clients.All.recieveMessage(temp);
         }

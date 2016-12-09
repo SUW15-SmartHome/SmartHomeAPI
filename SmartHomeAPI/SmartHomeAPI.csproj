@@ -223,6 +223,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlarmsAPIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LampsAPIController.cs" />
     <Compile Include="Controllers\TemperaturesAPIController.cs" />
@@ -233,6 +234,24 @@
     <Compile Include="Hubs\TemperatureHub.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Alarm.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alarm.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alarm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alarm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alarm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alarm.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alarms.cs">
+      <DependentUpon>Alarm.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Lamp.Context.cs">
       <AutoGen>True</AutoGen>
@@ -286,6 +305,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Alarm.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Alarm.edmx</DependentUpon>
+      <LastGenOutput>Alarm.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Alarm.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Alarm.edmx</DependentUpon>
+      <LastGenOutput>Alarm.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Lamp.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Lamp.edmx</DependentUpon>
@@ -341,6 +370,13 @@
     <Content Include="Models\Temperature.edmx.diagram">
       <DependentUpon>Temperature.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\Alarm.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Alarm.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Alarm.edmx.diagram">
+      <DependentUpon>Alarm.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -369,6 +405,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\AlarmsAPI\Create.cshtml" />
+    <Content Include="Views\AlarmsAPI\Delete.cshtml" />
+    <Content Include="Views\AlarmsAPI\Details.cshtml" />
+    <Content Include="Views\AlarmsAPI\Edit.cshtml" />
+    <Content Include="Views\AlarmsAPI\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

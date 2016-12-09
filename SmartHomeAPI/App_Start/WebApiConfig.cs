@@ -29,6 +29,7 @@ namespace SmartHomeAPI
 
             EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "GET,POST,PUT,DELETE");
             config.EnableCors(cors);
+            //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }
