@@ -13,10 +13,10 @@ namespace SmartHomeAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AlarmEntities : DbContext
+    public partial class SmartHomeDatabaseAlarmsEntities : DbContext
     {
-        public AlarmEntities()
-            : base("name=AlarmEntities")
+        public SmartHomeDatabaseAlarmsEntities()
+            : base("name=SmartHomeDatabaseAlarmsEntities")
         {
         }
     

@@ -12,10 +12,10 @@ namespace SmartHomeAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Lamp
+    public partial class Lights
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Nullable<bool> Light { get; set; }
+        public bool Status { get; set; }
     }
 }

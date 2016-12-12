@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="91d648c6c91947b6bea948292a3e38a6" Name="Diagram1">
-        <EntityTypeShape EntityType="SmartHomeLampModel.Lamp" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="fbde8e49d9f447078400543be8b7c4c7" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartHomeDatabaseLightsModel.Lights" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

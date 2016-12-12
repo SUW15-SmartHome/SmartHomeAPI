@@ -13,10 +13,10 @@ namespace SmartHomeAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TemperatureEntities : DbContext
+    public partial class SmartHomeDatabaseTemperaturesEntities : DbContext
     {
-        public TemperatureEntities()
-            : base("name=TemperatureEntities")
+        public SmartHomeDatabaseTemperaturesEntities()
+            : base("name=SmartHomeDatabaseTemperaturesEntities")
         {
         }
     

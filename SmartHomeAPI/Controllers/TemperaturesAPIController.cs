@@ -17,7 +17,7 @@ namespace SmartHomeAPI.Controllers
 {
     public class TemperaturesAPIController : ApiController
     {
-        private TemperatureEntities db = new TemperatureEntities();
+        private SmartHomeDatabaseTemperaturesEntities db = new SmartHomeDatabaseTemperaturesEntities();
 
         // GET: api/TemperaturesAPI
         public IQueryable<Temperatures> GetTemperatures()
@@ -71,7 +71,7 @@ namespace SmartHomeAPI.Controllers
             }
 
             var hub = GlobalHost.ConnectionManager.GetHubContext<TemperatureHub>();
-            hub.Clients.All.recieveMessage(temperatures);
+            hub.Clients.All.recieveNewTemperatureValues(temperatures);
 
             return StatusCode(HttpStatusCode.NoContent);
         }

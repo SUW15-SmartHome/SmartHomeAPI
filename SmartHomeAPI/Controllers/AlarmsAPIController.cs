@@ -15,7 +15,7 @@ namespace SmartHomeAPI.Controllers
 {
     public class AlarmsAPIController : ApiController
     {
-        private AlarmEntities db = new AlarmEntities();
+        private SmartHomeDatabaseAlarmsEntities db = new SmartHomeDatabaseAlarmsEntities();
 
         // GET: api/AlarmsAPI
         public IQueryable<Alarms> GetAlarms()

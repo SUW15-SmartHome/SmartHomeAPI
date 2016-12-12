@@ -13,44 +13,44 @@ using SmartHomeAPI.Models;
 
 namespace SmartHomeAPI.Controllers
 {
-    public class LampsAPIController : ApiController
+    public class LightsAPIController : ApiController
     {
-        private SmartHomeLampEntities db = new SmartHomeLampEntities();
+        private SmartHomeDatabaseLightsEntities db = new SmartHomeDatabaseLightsEntities();
 
-        // GET: api/LampsAPI
-        public IQueryable<Lamp> GetLamp()
+        // GET: api/LightsAPI
+        public IQueryable<Lights> GetLights()
         {
-            return db.Lamp;
+            return db.Lights;
         }
 
-        // GET: api/LampsAPI/5
-        [ResponseType(typeof(Lamp))]
-        public async Task<IHttpActionResult> GetLamp(int id)
+        // GET: api/LightsAPI/5
+        [ResponseType(typeof(Lights))]
+        public async Task<IHttpActionResult> GetLights(int id)
         {
-            Lamp lamp = await db.Lamp.FindAsync(id);
-            if (lamp == null)
+            Lights lights = await db.Lights.FindAsync(id);
+            if (lights == null)
             {
                 return NotFound();
             }
 
-            return Ok(lamp);
+            return Ok(lights);
         }
 
-        // PUT: api/LampsAPI/5
+        // PUT: api/LightsAPI/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutLamp(int id, Lamp lamp)
+        public async Task<IHttpActionResult> PutLights(int id, Lights lights)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != lamp.Id)
+            if (id != lights.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(lamp).State = EntityState.Modified;
+            db.Entry(lights).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace SmartHomeAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LampExists(id))
+                if (!LightsExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace SmartHomeAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/LampsAPI
-        [ResponseType(typeof(Lamp))]
-        public async Task<IHttpActionResult> PostLamp(Lamp lamp)
+        // POST: api/LightsAPI
+        [ResponseType(typeof(Lights))]
+        public async Task<IHttpActionResult> PostLights(Lights lights)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Lamp.Add(lamp);
+            db.Lights.Add(lights);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = lamp.Id }, lamp);
+            return CreatedAtRoute("DefaultApi", new { id = lights.Id }, lights);
         }
 
-        // DELETE: api/LampsAPI/5
-        [ResponseType(typeof(Lamp))]
-        public async Task<IHttpActionResult> DeleteLamp(int id)
+        // DELETE: api/LightsAPI/5
+        [ResponseType(typeof(Lights))]
+        public async Task<IHttpActionResult> DeleteLights(int id)
         {
-            Lamp lamp = await db.Lamp.FindAsync(id);
-            if (lamp == null)
+            Lights lights = await db.Lights.FindAsync(id);
+            if (lights == null)
             {
                 return NotFound();
             }
 
-            db.Lamp.Remove(lamp);
+            db.Lights.Remove(lights);
             await db.SaveChangesAsync();
 
-            return Ok(lamp);
+            return Ok(lights);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace SmartHomeAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool LampExists(int id)
+        private bool LightsExists(int id)
         {
-            return db.Lamp.Count(e => e.Id == id) > 0;
+            return db.Lights.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace SmartHomeAPI.Hubs
     {
         public void broadcastMessage(Temperatures temp)
         {
-            Clients.All.recieveMessage(temp);
+            Clients.All.recieveNewTemperatureValues(temp);
         }
     }
 }

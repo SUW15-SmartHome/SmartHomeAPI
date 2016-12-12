@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="311b045794c74c93aae8736d82efaf80" Name="Diagram1">
-        <EntityTypeShape EntityType="Alarm.Alarms" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="556aae44f3ce47079d0b15c66fab7095" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartHomeDatabaseAlarmsModel.Alarms" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
