@@ -82,3 +82,7 @@ C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\b
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.Owin.Cors.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\WebApiContrib.Formatting.Jsonp.dll
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\Microsoft.Owin.Cors.xml
+C:\Users\kevin\Documents\Visual Studio 2015\Projects\SmartHomeAPI\SmartHomeAPI\bin\WebApiContrib.Formatting.Jsonp.pdb

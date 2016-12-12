@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Owin;
 using Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.AspNet.SignalR;
 using System.Threading.Tasks;
 
@@ -16,8 +17,18 @@ namespace SmartHomeAPI
     {
         public void Configuration(IAppBuilder app)
         {
+            app.Map("/signalr", map =>
+            {
+                map.UseCors(CorsOptions.AllowAll);
+                var hubConfiguration = new HubConfiguration
+                {
+                    EnableJSONP = true
+                };
+
+                map.RunSignalR(hubConfiguration);
+            });
             //app.MapSignalR("/signalr", new HubConfiguration());
-            app.MapSignalR();
+            //app.MapSignalR();
             ConfigureAuth(app);
         }
     }

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SmartHomeAPI.Models;
+using Microsoft.AspNet.SignalR;
+using SmartHomeAPI.Hubs;
 
 namespace SmartHomeAPI.Controllers
 {
@@ -67,6 +69,9 @@ namespace SmartHomeAPI.Controllers
                     throw;
                 }
             }
+
+            var hub = GlobalHost.ConnectionManager.GetHubContext<TemperatureHub>();
+            hub.Clients.All.recieveMessage(temperatures);
 
             return StatusCode(HttpStatusCode.NoContent);
         }
