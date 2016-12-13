@@ -57,6 +57,8 @@ namespace SmartHomeAPI.Controllers
             try
             {
                 await db.SaveChangesAsync();
+                var hub = GlobalHost.ConnectionManager.GetHubContext<TemperatureHub>();
+                hub.Clients.All.recieveNewTemperatureValues(temperatures);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -69,9 +71,7 @@ namespace SmartHomeAPI.Controllers
                     throw;
                 }
             }
-
-            var hub = GlobalHost.ConnectionManager.GetHubContext<TemperatureHub>();
-            hub.Clients.All.recieveNewTemperatureValues(temperatures);
+            
 
             return StatusCode(HttpStatusCode.NoContent);
         }
